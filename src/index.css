@@ -1,13 +1,105 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.App {
+  width: 100%;
+}
+
+.Header {
+  width: 100%;
+  background: #ccc;
+  padding: 20px;
+}
+
+.Header h1 {
+  text-align: center;
+}
+
+.Nav {
+  background: #1b1b1b;
+  color: #fff;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Nav input[type="text"] {
+  min-width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.Nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Nav ul a {
+  display: inline-block;
+  color: inherit;
+  position: relative;
+}
+
+.Nav ul a::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  margin-top: 4px;
+  background: #fff;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.Nav ul a:hover::after {
+  width: 100%;
+}
+
+.Home {
+  padding: 20px;
+}
+
+.Post {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.Post::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  margin-top: 5px;
+}
+
+.postDate {
+  color: #636363;
+  margin-bottom: 10px;
+}
+
