@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Nav = ({ search, setSearch }) => {
+  
+
   return (
     <nav className='Nav'>
       <form
@@ -17,19 +19,19 @@ const Nav = ({ search, setSearch }) => {
       </form>
       <ul>
           <li>
-            <Link to="/">
+            <NavLink to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="post">
+            <NavLink to="post">
               Post
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="about">
+            <NavLink to="about">
               About
-            </Link>
+            </NavLink>
           </li>
         </ul>
     </nav>

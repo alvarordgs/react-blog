@@ -28,7 +28,15 @@ function App() {
       body: 'Lorem ipsum dolor sit amet'
     }
   ])
+
   const [search, setSearch] = ('')
+  const navigate = useNavigate()
+
+  const handleDelete = (id) => {
+    const postsList = posts.filter((post) => post.id !== id)
+    setPosts(postsList)
+    navigate('/')
+  }
 
   return (
     <Routes>
@@ -41,7 +49,9 @@ function App() {
         />} />
         <Route path="post">
           <Route index element={<NewPost />} />
-          <Route path=":id" element={<PostPage />} />
+          <Route path=":id" element={<PostPage 
+          posts={posts}
+          handleDelete={handleDelete} />} />
         </Route>
         <Route path="about" element={<About />} />
         <Route path="*" element={<Missing />} />
