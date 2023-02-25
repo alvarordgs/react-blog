@@ -133,3 +133,51 @@ ul {
 .post button:hover {
   background: #ce0000;
 }
+
+.NewPost {
+  padding: 60px 20px;
+}
+
+.NewPost h2{
+  margin-bottom: 40px;
+} 
+
+.NewPost form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.NewPost form input[type="text"],
+.NewPost form textarea {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.NewPost form textarea {
+  min-height: 200px;
+}
+
+.NewPost form button {
+  align-self: start;
+  padding: 8px 24px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.About {
+  padding: 60px 20px;
+}
+
+.About h2{
+  margin-bottom: 20px;
+}
+
+.About p {
+  margin-bottom: 20px;
+}
+
+.About p:last-child {
+  margin-bottom: 100px;
+}
